@@ -166,7 +166,7 @@ class _MessageInputState extends State<MessageInput>
 
           // Send / Voice button
           AnimatedBuilder(
-            animation: _sendButtonAnimation,
+            listenable: _sendButtonAnimation,
             builder: (context, child) {
               return Container(
                 width: 50,

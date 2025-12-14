@@ -270,7 +270,7 @@ class _ChatListScreenState extends State<ChatListScreen>
     );
 
     return AnimatedBuilder(
-      animation: animation,
+      listenable: animation,
       builder: (context, child) {
         return Transform.translate(
           offset: Offset(0, 20 * (1 - animation.value)),
