@@ -45,13 +45,17 @@ The app features:
    - Copy and run the contents of `supabase/schema.sql`
    - This creates all required tables, indexes, and security policies
 
-4. **Configure the App**
-   - Open `lib/config/supabase_config.dart`
-   - Replace the placeholder values with your Supabase credentials:
-   ```dart
-   static const String supabaseUrl = 'https://your-project.supabase.co';
-   static const String supabaseAnonKey = 'your-anon-key';
-   ```
+4. **Configure Environment Variables**
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Edit `.env` with your Supabase credentials:
+     ```
+     SUPABASE_URL=https://your-project-id.supabase.co
+     SUPABASE_ANON_KEY=your-anon-key-here
+     ```
+   - Get these values from: Settings → API in your Supabase dashboard
 
 5. **Install Dependencies**
    ```bash
@@ -110,6 +114,7 @@ All tables have Row Level Security (RLS) enabled for proper data isolation.
 
 - `supabase_flutter` - Supabase client for Flutter
 - `provider` - State management
+- `flutter_dotenv` - Environment variable management
 - `intl` - Date/time formatting
 - `timeago` - Relative time display
 - `cached_network_image` - Image caching
